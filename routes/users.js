@@ -7,6 +7,7 @@ router.get('/info', (req, res, next) => {
     MongoClient.connect(url, function(err, db) {
         if (err) throw err;
         var dbo = db.db("Test");
+        console.log('')
         dbo.collection("CollectionTest").find({}).toArray(function(err, result) {
             if (err) throw err;
             res.send(result);

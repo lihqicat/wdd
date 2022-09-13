@@ -1,8 +1,9 @@
-const express = require('express');
-const router = express.Router();
+const pageMeta = require('./pageMeta');
+const users = require('./users');
+const readFs = require('./readFs');
 
-// router.get('/', (req, res, next) => { 
-//     res.send({page:'home'});
-// })
-
-module.exports = router;
+module.exports = {
+    pageMeta,
+    users,
+    readFs,
+}
